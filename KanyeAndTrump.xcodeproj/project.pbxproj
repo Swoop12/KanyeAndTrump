@@ -14,6 +14,9 @@
 		F7B1EBDF2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBDD2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld */; };
 		F7B1EBE12138C3F000944D39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBE02138C3F000944D39 /* CoreDataStack.swift */; };
 		F7B1EBE52138CAA000944D39 /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBE42138CAA000944D39 /* QuoteTableViewController.swift */; };
+		F7B1EBE82138CFE900944D39 /* Quote+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBE72138CFE900944D39 /* Quote+Convenience.swift */; };
+		F7B1EBEA2138D51600944D39 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBE92138D51600944D39 /* QuoteTableViewCell.swift */; };
+		F7B1EBED2138E57B00944D39 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBEC2138E57B00944D39 /* QuoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		F7B1EBDE2138C2ED00944D39 /* KanyeAndTrump.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KanyeAndTrump.xcdatamodel; sourceTree = "<group>"; };
 		F7B1EBE02138C3F000944D39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		F7B1EBE42138CAA000944D39 /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
+		F7B1EBE72138CFE900944D39 /* Quote+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+Convenience.swift"; sourceTree = "<group>"; };
+		F7B1EBE92138D51600944D39 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
+		F7B1EBEC2138E57B00944D39 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		F7B1EBCA2138BDF400944D39 /* KanyeAndTrump */ = {
 			isa = PBXGroup;
 			children = (
+				F7B1EBEB2138D51C00944D39 /* Views */,
 				F7B1EBE62138CAAD00944D39 /* ViewControllers */,
 				F7B1EBE32138C60800944D39 /* Resources */,
 				F7B1EBE22138C5FC00944D39 /* Model */,
@@ -70,6 +77,7 @@
 			children = (
 				F7B1EBDD2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld */,
 				F7B1EBE02138C3F000944D39 /* CoreDataStack.swift */,
+				F7B1EBE72138CFE900944D39 /* Quote+Convenience.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,8 +98,17 @@
 			isa = PBXGroup;
 			children = (
 				F7B1EBE42138CAA000944D39 /* QuoteTableViewController.swift */,
+				F7B1EBEC2138E57B00944D39 /* QuoteViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F7B1EBEB2138D51C00944D39 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7B1EBE92138D51600944D39 /* QuoteTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +184,10 @@
 			files = (
 				F7B1EBDF2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld in Sources */,
 				F7B1EBCC2138BDF400944D39 /* AppDelegate.swift in Sources */,
+				F7B1EBEA2138D51600944D39 /* QuoteTableViewCell.swift in Sources */,
+				F7B1EBE82138CFE900944D39 /* Quote+Convenience.swift in Sources */,
 				F7B1EBE52138CAA000944D39 /* QuoteTableViewController.swift in Sources */,
+				F7B1EBED2138E57B00944D39 /* QuoteViewController.swift in Sources */,
 				F7B1EBE12138C3F000944D39 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KanyeAndTrump/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KanyeAndTrump/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KanyeAndTrump/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KanyeAndTrump/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

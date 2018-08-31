@@ -12,16 +12,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Dragon Engery-->
         <scene sceneID="XwB-of-9AO">
             <objects>
-                <tableViewController id="oF3-14-aaE" sceneMemberID="viewController">
+                <tableViewController id="oF3-14-aaE" customClass="QuoteTableViewController" customModule="KanyeAndTrump" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TDX-AZ-PlM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="139" id="Lhz-Oe-Kwe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quoteCell" rowHeight="139" id="Lhz-Oe-Kwe" customClass="QuoteTableViewCell" customModule="KanyeAndTrump" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="139"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lhz-Oe-Kwe" id="f3L-3z-e5i">
@@ -52,6 +52,9 @@
                                                 <constraint firstAttribute="width" constant="50" id="P8g-5i-FjC"/>
                                             </constraints>
                                             <state key="normal" image="trump"/>
+                                            <connections>
+                                                <action selector="trumpButtonTapped:" destination="Lhz-Oe-Kwe" eventType="touchUpInside" id="uQI-Dy-JxL"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -64,7 +67,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Jqm-Oy-hch" kind="show" id="SlU-cQ-gJA"/>
+                                    <outlet property="authorTextField" destination="g1H-lT-5cY" id="U8x-tq-fVb"/>
+                                    <outlet property="quoteLabel" destination="Zi9-xr-TKk" id="VdV-3I-l5J"/>
+                                    <outlet property="trumpButton" destination="hXs-k1-gkp" id="7cr-7R-DOV"/>
+                                    <segue destination="Jqm-Oy-hch" kind="show" identifier="toDetailVC" id="SlU-cQ-gJA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -73,16 +79,22 @@
                             <outlet property="delegate" destination="oF3-14-aaE" id="sAO-cj-PTt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="f5Z-yO-FPp"/>
+                    <navigationItem key="navigationItem" title="Dragon Engery" id="ptK-Z1-I8c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7s6-xF-HDU">
+                            <connections>
+                                <action selector="addQuoteButtonTapped:" destination="oF3-14-aaE" id="KUC-Ei-k2z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efc-uv-WVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1303.2" y="191.1544227886057"/>
         </scene>
-        <!--View Controller-->
+        <!--Quote View Controller-->
         <scene sceneID="G47-mc-ydA">
             <objects>
-                <viewController id="Jqm-Oy-hch" sceneMemberID="viewController">
+                <viewController id="Jqm-Oy-hch" customClass="QuoteViewController" customModule="KanyeAndTrump" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="orN-2e-SVf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,6 +125,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PJy-4v-kF4"/>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="9Cl-Fr-Jkn" id="vf4-L6-84P"/>
+                        <outlet property="quoteLabel" destination="Rnj-rE-Scu" id="qX5-xX-rDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHp-rA-6T1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
