@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		F7B1EBCC2138BDF400944D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBCB2138BDF400944D39 /* AppDelegate.swift */; };
-		F7B1EBCE2138BDF400944D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBCD2138BDF400944D39 /* ViewController.swift */; };
 		F7B1EBD12138BDF400944D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B1EBCF2138BDF400944D39 /* Main.storyboard */; };
 		F7B1EBD32138BDF600944D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B1EBD22138BDF600944D39 /* Assets.xcassets */; };
 		F7B1EBD62138BDF600944D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B1EBD42138BDF600944D39 /* LaunchScreen.storyboard */; };
+		F7B1EBDF2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBDD2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld */; };
+		F7B1EBE12138C3F000944D39 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBE02138C3F000944D39 /* CoreDataStack.swift */; };
+		F7B1EBE52138CAA000944D39 /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EBE42138CAA000944D39 /* QuoteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7B1EBC82138BDF400944D39 /* KanyeAndTrump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanyeAndTrump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B1EBCB2138BDF400944D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7B1EBCD2138BDF400944D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7B1EBD02138BDF400944D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7B1EBD22138BDF600944D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7B1EBD52138BDF600944D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7B1EBD72138BDF600944D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7B1EBDE2138C2ED00944D39 /* KanyeAndTrump.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KanyeAndTrump.xcdatamodel; sourceTree = "<group>"; };
+		F7B1EBE02138C3F000944D39 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F7B1EBE42138CAA000944D39 /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		F7B1EBCA2138BDF400944D39 /* KanyeAndTrump */ = {
 			isa = PBXGroup;
 			children = (
+				F7B1EBE62138CAAD00944D39 /* ViewControllers */,
+				F7B1EBE32138C60800944D39 /* Resources */,
+				F7B1EBE22138C5FC00944D39 /* Model */,
+			);
+			path = KanyeAndTrump;
+			sourceTree = "<group>";
+		};
+		F7B1EBE22138C5FC00944D39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7B1EBDD2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld */,
+				F7B1EBE02138C3F000944D39 /* CoreDataStack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7B1EBE32138C60800944D39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				F7B1EBCB2138BDF400944D39 /* AppDelegate.swift */,
-				F7B1EBCD2138BDF400944D39 /* ViewController.swift */,
 				F7B1EBCF2138BDF400944D39 /* Main.storyboard */,
 				F7B1EBD22138BDF600944D39 /* Assets.xcassets */,
 				F7B1EBD42138BDF600944D39 /* LaunchScreen.storyboard */,
 				F7B1EBD72138BDF600944D39 /* Info.plist */,
 			);
-			path = KanyeAndTrump;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F7B1EBE62138CAAD00944D39 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7B1EBE42138CAA000944D39 /* QuoteTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7B1EBCE2138BDF400944D39 /* ViewController.swift in Sources */,
+				F7B1EBDF2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld in Sources */,
 				F7B1EBCC2138BDF400944D39 /* AppDelegate.swift in Sources */,
+				F7B1EBE52138CAA000944D39 /* QuoteTableViewController.swift in Sources */,
+				F7B1EBE12138C3F000944D39 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +364,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F7B1EBDD2138C2ED00944D39 /* KanyeAndTrump.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F7B1EBDE2138C2ED00944D39 /* KanyeAndTrump.xcdatamodel */,
+			);
+			currentVersion = F7B1EBDE2138C2ED00944D39 /* KanyeAndTrump.xcdatamodel */;
+			path = KanyeAndTrump.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F7B1EBC02138BDF400944D39 /* Project object */;
 }
